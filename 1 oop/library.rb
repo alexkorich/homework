@@ -23,7 +23,7 @@ class Library
 	end
 
 	def add_order(order)
-		if order.class==Orders
+		if order.class== Order
 		orders<<order
 		else raise "New order must be a Reader class!"
 		end
@@ -44,12 +44,12 @@ class Library
 		hash.max_by{|k,v| v}[0]
 	end
 
-	def self.most_often_taker()
-		most_frequent(self.orders, reader)
+	def most_often_taker
+		most_frequent(self.orders, "reader")
 	end
 
-	def self.most_popular_book
-		most_frequent(self.orders, book)
+	def most_popular_book
+		most_frequent(self.orders, "book")
 	end
 
 	# def self.how_many_most_3

@@ -13,7 +13,7 @@ class Reader
 			raise "Email is not valid!"
 		end
 	end
-	# def to_s
-	# 	""
-	# end
+	def to_s
+		"#{@name}"
+	end
 end
