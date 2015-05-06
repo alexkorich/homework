@@ -2,27 +2,30 @@ require_relative 'author'
 require_relative 'order'
 require_relative 'reader'
 require_relative 'book'
+require 'json'
 
 class Library
-	def initialize(name)
-		@name=name
-		@readers=Array.new
-	end
-	attr_accessor :books, :orders, :readers, :authors, :name
-	
-	
+	attr_reader :books, :orders, :readers, :authors, :name
+ 
+ def initialize(name)
+		@name    =name
+		@books   =Array.new
+		@orders  =Array.new
+		@readers =Array.new
+		@authors =Array.new
+	end	
 
 	def add_reader(reader)
 		if reader.class==Reader
 			@readers<<reader
-		else 
+		else raise "New reader must be a Reader class!"
 		end
 	end
 
 	def add_order(order)
 		if order.class==Orders
 		orders<<order
-		else raise "New reader must be a Reader class!"
+		else raise "New order must be a Reader class!"
 		end
 	end
 
@@ -34,41 +37,41 @@ class Library
 		end
 	end
 
-	def get_book(book, reader)
-		if self.search_b(book)
-			if self.search_r(reader)
-			book.count+=1
-			reader.books_taken<<book
-			reader.has_books<<book
-			else  puts "No such book!"
-			end
-		end
-	end
 
-	def self.most_popular
-		self.books.sort {|b1, b2| b2[counts] <=> b1[counts] }
-	end
-
-	def self.most_popular_one
-		self.most_popular.first
+	def most_frequent (array, property)
+		hash=Hash.new(0)
+		array.each {|item| hash[item.send(property.to_sym)] += 1}
+		hash.max_by{|k,v| v}[0]
 	end
 
 	def self.most_often_taker()
-		self.readers.sort {|r1, r2| b2[books_taken].length <=> b1[books_taken].length}.first
+		most_frequent(self.orders, reader)
 	end
 
-
-	def how_many_ordered
-		self.readers do |r|
-			if (r.books_taken && self.most_popular).length>0
-			how_many+=r
-			how_many.length
-			end
-		end
+	def self.most_popular_book
+		most_frequent(self.orders, book)
 	end
+
+	# def self.how_many_most_3
+	# 	hash=Hash.new(0)
+	# 	self.orders.each {|order| hash[order.book] += 1}
+	# 	hash.sort_by()
+	# end
+
+
+
+	# def how_many_ordered
+	# 	self.readers do |r|
+	# 		if (r.books_taken && self.most_popular).length>0
+	# 		how_many+=r
+	# 		how_many.length
+	# 		end
+	# 	end
+	# end
 
 	# def save_to_file(filename)
 	# 	f = File.new("#{filename}.libfile",  "w+")
+	# 	self.
 		
 	# end
 

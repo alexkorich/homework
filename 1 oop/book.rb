@@ -1,24 +1,20 @@
 class Book
 	attr_reader :title, :author
+
 	def initialize(title, author)
+		if author.class==Author
 		@title=title
 		@author=author
-		@count=0
-		@taken_by=nil
+		else
+			raise "Author is not valid!"
+		end
 	end
 	
 	def count(c)              
 		@count=c
 	end
 
-	private
-	def title(title)
-		@title=title
-	end
-
-	def author(author)
-		@author=author
-	end
+	
 	def to_s
 		"Title: #{self.title.to_s}, author: #{self.author.to_s}, taken by:  #{self.taken_by.to_s}"
 	end

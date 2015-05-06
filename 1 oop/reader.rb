@@ -9,8 +9,6 @@ class Reader
 			@city=city
 			@street=street
 			@house=house
-			@books_taken=[]
-			@has_books=[]
 		else
 			raise "Email is not valid!"
 		end
