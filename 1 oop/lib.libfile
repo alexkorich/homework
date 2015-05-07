@@ -1,0 +1,63 @@
+o:Library
+:
+@nameI"NewLib:ET:@books[	o:	Book:@titleI"
+Book1;T:@authoro:Author;I"Dan;T:@biographyI"	bio1;To;	;
+I"
+Book2;T;o;;I"
+Frank;T;I"	bio2;To;	;
+I"
+Book3;T;o;;I"
+Brian;T;I"	bio3;To;	;
+I"
+Book4;T;o;;I"Avi;T;I"	bio4;T:@orders[!o:
+Order:
+@booko;	;
+I"
+Book6;T;@:@readero:Reader
+;I"John One;T:@emailI"john@23.com;T:
+@cityI"ny;T:@street0:@house0:
+@dateIu:	Time‡–ÄãﬁµŒ
+:nano_numi‚:nano_deni:submicro"H :offseti0*:	zoneI"	EEST;Fo;;@;o;
+;I"Ben Two;T;I"ben@23.com;T;I"ny;T;0;0;Iu;‡–ÄíﬁµŒ
+;i/;i;"ÅP;i0*;I"	EEST;Fo;;@;o;
+;I"Ted Three;T;I"ted@23.com;T;I"ny;T;0;0;Iu;‡–ÄñﬁµŒ
+;i÷;i;"r`;i0*;I"	EEST;Fo;;@;o;
+;I"Tim Four;T;I"tim@23.com;T;I"ny;T;0;0;Iu;‡–ÄöﬁµŒ
+;iï;i;"ê;i0*;I"	EEST;Fo;;@;o;
+;I"Roger Five;T;I"roger@23.com;T;I"ny;T;0;0;Iu;‡–ÄùﬁµŒ
+;i;;i;"W;i0*;I"	EEST;Fo;;@;@ ;Iu;‡–Ä†ﬁµŒ
+;i·;i;"ô0;i0*;I"	EEST;Fo;;o;	;
+I"
+Book5;T;@
+;@ ;Iu;‡–Ä§ﬁµŒ
+;iü;i;"AP;i0*;I"	EEST;Fo;;@;@@;Iu;‡–Ä≠ﬁµŒ
+;i◊;i;"!P;i0*;I"	EEST;Fo;;o;	;
+I"
+Book7;T;@;@(;Iu;‡–Ä±ﬁµŒ
+;i~;i;"`;i0*;I"	EEST;Fo;;o;	;
+I"
+Book8;T;@;@0;Iu;‡–Ä¥ﬁµŒ
+;i%;i;"Tê;i0*;I"	EEST;Fo;;o;	;
+I"
+Book9;T;@;@8;Iu;‡–Ä∑ﬁµŒ
+;iÀ;i;"ó;i0*;I"	EEST;Fo;;o;	;
+I"Book10;T;@;@@;Iu;‡–ÄªﬁµŒ
+;iâ;i;"90;i0*;I"	EEST;Fo;;@;@ ;Iu;‡–ÄæﬁµŒ
+;i/;i;"ÅP;i0*;I"	EEST;Fo;;@h;@ ;Iu;‡–Ä¬ﬁµŒ
+;iÓ;i;"#Ä;i0*;I"	EEST;Fo;;@;@0;Iu;‡–Ä≈ﬁµŒ
+;iî;i;"f;i0*;I"	EEST;Fo;;@;@(;Iu;‡–Ä…ﬁµŒ
+;iW;i;" ;i0*;I"	EEST;Fo;;@;@@;Iu;‡–ÄÃﬁµŒ
+;i¯;i;"P@;i0*;I"	EEST;Fo;;@;@8;Iu;‡–ÄœﬁµŒ
+;iû;i;"í`;i0*;I"	EEST;Fo;;@;@@;Iu;‡–Ä”ﬁµŒ
+;iF;i;"ÉÄ;i0*;I"	EEST;Fo;;@;@(;Iu;‡–Ä÷ﬁµŒ
+;i;i;"w;i0*;I"	EEST;Fo;;@L;@0;Iu;‡–Ä⁄ﬁµŒ
+;i¡;i;"0;i0*;I"	EEST;Fo;;@;@ ;Iu;‡–ÄﬁﬁµŒ
+;iQ;i;"Y0;i0*;I"	EEST;Fo;;@V;@(;Iu;‡–Ä‚ﬁµŒ
+;i;i;"P;i0*;I"	EEST;Fo;;@\;@0;Iu;‡–ÄÂﬁµŒ
+;i∂;i;"CÄ;i0*;I"	EEST;Fo;;@b;@8;Iu;‡–ÄËﬁµŒ
+;i\;i;"Ü;i0*;I"	EEST;Fo;;@h;@@;Iu;‡–ÄÏﬁµŒ
+;i;i;"( ;i0*;I"	EEST;Fo;;@;@ ;Iu;‡–ÄÔﬁµŒ
+;i¿;i;"p@;i0*;I"	EEST;Fo;;@L;@ ;Iu;‡–ÄÛﬁµŒ
+;i~;i;"`;i0*;I"	EEST;F:@readers[
+@ @(@0@8@@:@authors[	@
+@@@

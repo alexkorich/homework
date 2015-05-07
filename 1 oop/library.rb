@@ -45,42 +45,36 @@ class Library
 	end
 
 	def most_often_taker
-		most_frequent(self.orders, "reader")
+		r=most_frequent(self.orders, "reader")
+		puts "Most often taker is #{r}"
 	end
 
 	def most_popular_book
-		most_frequent(self.orders, "book")
+		b=most_frequent(self.orders, "book")
+		puts "Most popular book is #{b}"
 	end
 
-	# def self.how_many_most_3
-	# 	hash=Hash.new(0)
-	# 	self.orders.each {|order| hash[order.book] += 1}
-	# 	hash.sort_by()
-	# end
+	def how_many_most_3
+		hash=Hash.new(0)
+		self.orders.each {|order| hash[order.book.title] += 1}
+		b=hash.sort_by{ |k,v| -v }[0..2]  
+		count=0  
+		b.flatten!
+		b.delete_if {|d| d.class==Fixnum}
+		puts  "Three most popular books are #{b[0]}, #{b[1]} and #{b[2]}"
+		self.orders.each do |order|
+			if b.include?(order.book.title)
+				count+=1
+			end
+		end
+		puts "They've been ordered by #{count} readers"
+	end
 
+	def save_to_file(filename)
+		File.open("#{filename}.libfile", 'w') {|f| f.write(Marshal.dump(self)) }
+	end
 
-
-	# def how_many_ordered
-	# 	self.readers do |r|
-	# 		if (r.books_taken && self.most_popular).length>0
-	# 		how_many+=r
-	# 		how_many.length
-	# 		end
-	# 	end
-	# end
-
-	# def save_to_file(filename)
-	# 	f = File.new("#{filename}.libfile",  "w+")
-	# 	self.
-		
-	# end
-
-	# def self.get_from_file(filename)
-	# 	f = File.new(filename, "r")
-	# 	a=f.readlines("\n")
-	# 	if a.first=="This is libfile!" && a.last="--EndLib--"
-	# 	puts "luil"
-	# 	else puts("Wrong libfile!")
-	# 	end
-	# end
+	def self.get_from_file(filename)
+	Marshal.load(File.read(filename))
+	end
 end

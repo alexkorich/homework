@@ -16,6 +16,6 @@ class Book
 
 	
 	def to_s
-		"Title1: #{self.title.to_s}, author: #{self.author.to_s}"
+		"#{self.title.to_s}, #{self.author.name}"
 	end
 end

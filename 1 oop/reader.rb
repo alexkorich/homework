@@ -14,6 +14,6 @@ class Reader
 		end
 	end
 	def to_s
-		"#{@name}"
+		"#{@name}, #{email}"
 	end
 end

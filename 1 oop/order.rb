@@ -1,9 +1,17 @@
 class Order
 	attr_accessor :book, :reader, :date
 	def initialize(book, reader)
-		@book=book
-		@reader=reader
-		@date=Time.now
+		if book.class == Book
+			if reader.class == Reader
+			@book=book
+			@reader=reader
+			@date=Time.now
+			else
+				raise "Order must have a valid reader!"
+			end
+		else
+			raise "Order must have a valid book!"
+		end
 	end
 
 	
